@@ -17,3 +17,5 @@ def test_recommended_locators(page: Page):
     first_name.clear()
 
     page.get_by_label("First Name").fill("Erik")
+
+    page.get_by_role("button", name="Register").click()
