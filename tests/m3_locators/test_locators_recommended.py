@@ -19,3 +19,6 @@ def test_recommended_locators(page: Page):
     page.get_by_label("First Name").fill("Erik")
 
     page.get_by_role("button", name="Register").click()
+
+    warning = page.get_by_text("Valid last name is required")
+    expect(warning).to_be_visible()
